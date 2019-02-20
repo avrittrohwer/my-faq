@@ -1,0 +1,70 @@
+body {
+  --main-color: #333;
+  --secondary-color: #aaa;
+  font-family: Roboto;
+}
+
+.app-body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  color: var(--secondary-color);
+  letter-spacing: 0.1em;
+}
+
+header {
+  background: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.search-bar {
+  border-radius: 3px;
+  border: none;
+  padding: 0.5em;
+}
+
+.add-button {
+  --button-size: 3em;
+  height: var(--button-size);
+  width: var(--button-size);
+  border-radius: 100%;
+  border: none;
+  background: var(--secondary-color);
+  transition: background 100ms ease-in-out;
+}
+
+.add-button:hover {
+  background: white;
+}
+
+.questions {
+  overflow: auto;
+  padding: 0 1em;
+  height: 100%;
+}
+
+.q-view {
+  padding: 0 1em 1em 1em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.q-question {
+  border: none;
+  font-size: 1.5em;
+  margin: 1em 0;
+}
+
+.q-answer {
+  font-size: 1.2em;
+  height: 100%;
+  resize: none;
+}
