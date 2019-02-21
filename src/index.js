@@ -5,7 +5,7 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/my-faq">
     <App />
   </BrowserRouter>,
   document.getElementById("root")
