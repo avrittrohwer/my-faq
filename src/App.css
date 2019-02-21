@@ -1,7 +1,17 @@
 body {
-  --main-color: #333;
-  --secondary-color: #aaa;
+  --main-color: #212121;
+  --secondary-color: #484848;
+  --corner-radius: 3px;
   font-family: Roboto;
+  background: var(--main-color);
+  color: white;
+}
+
+*:visited {
+  text-decoration: none;
+}
+*:link {
+  text-decoration: none;
 }
 
 .app-body {
@@ -12,12 +22,11 @@ body {
 }
 
 .app-title {
-  color: var(--secondary-color);
   letter-spacing: 0.1em;
+  color: white;
 }
 
 header {
-  background: var(--main-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,7 +34,7 @@ header {
 }
 
 .search-bar {
-  border-radius: 3px;
+  border-radius: var(--corner-radius);
   border: none;
   padding: 0.5em;
 }
@@ -36,18 +45,23 @@ header {
   width: var(--button-size);
   border-radius: 100%;
   border: none;
-  background: var(--secondary-color);
-  transition: background 100ms ease-in-out;
-}
-
-.add-button:hover {
   background: white;
+  cursor: pointer;
 }
 
 .questions {
   overflow: auto;
   padding: 0 1em;
   height: 100%;
+}
+
+.q-preview {
+  border-bottom: 2px solid white;
+  padding-bottom: 1em;
+}
+
+.q-preview h3 {
+  color: white;
 }
 
 .q-view {
@@ -61,10 +75,19 @@ header {
   border: none;
   font-size: 1.5em;
   margin: 1em 0;
+  resize: none;
 }
 
 .q-answer {
   font-size: 1.2em;
   height: 100%;
   resize: none;
+  margin-bottom: 1em;
+}
+
+.q-save {
+  background: white;
+  padding: 0.5em;
+  border: none;
+  border-radius: var(--corner-radius);
 }
